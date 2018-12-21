@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>appQuery</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>appQuery</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Method</ID>
+          <ToolTip>Method</ToolTip>
+          <Default>Method</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Result</ID>
+          <ToolTip>Result</ToolTip>
+          <Default>Result</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Query</ID>
+          <ToolTip>Query</ToolTip>
+          <Default>Query</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>QueryName</ID>
+          <ToolTip>QueryName</ToolTip>
+          <Default>QueryName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[[HttpGet]
+[Authorize]
+public async Task<$Result$> $Method$()
+{
+    return await _queryDispatcher.DispatchAsync<$QueryName$.Query, $Result$>(new $QueryName$.Query()
+    {
+        
+    });
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

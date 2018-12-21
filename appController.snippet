@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>appController</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>appController</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Template</ID>
+          <ToolTip>Template</ToolTip>
+          <Default>Template</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[using System.Threading.Tasks;
+using FWTL.Core.CQRS;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace FWTL.Api.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class $Template$Controller : ControllerBase
+    {
+        private readonly ICommandDispatcher _commandDispatcher;
+
+        private readonly IQueryDispatcher _queryDispatcher;
+
+        public $Template$Controller(ICommandDispatcher commandDispatcher, IQueryDispatcher queryDispatcher)
+        {
+            _commandDispatcher = commandDispatcher;
+            _queryDispatcher = queryDispatcher;
+        }
+    }
+}
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
