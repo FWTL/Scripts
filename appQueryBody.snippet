@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>appQueryBody</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>appQueryBody</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Result</ID>
+          <ToolTip>Result</ToolTip>
+          <Default>Result</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[
+    public class Cache : RedisJsonHandler<Query, $Result$>
+    {
+        public Cache(IDatabase cache) : base(cache)
+        {
+            KeyFn = query =>
+            {
+                
+            };
+        }
+
+        public override TimeSpan? Ttl(Query query)
+        {
+            
+        }
+    }
+
+    public class Handler : IQueryHandler<Query, $Result$>
+    {
+        public Handler()
+        {
+            _
+        }
+
+        public async Task<$Result$> HandleAsync(Query query)
+        {
+            
+        }
+    }
+
+    public class Query : IQuery
+    {
+       
+    }
+
+    public class Validator : AppAbstractValidation<Query>
+    {
+        public Validator()
+        {
+           
+        }
+    }
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

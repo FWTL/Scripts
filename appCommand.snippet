@@ -24,9 +24,9 @@
           </Function>
         </Literal>
         <Literal Editable="true">
-          <ID>Command</ID>
-          <ToolTip>Command</ToolTip>
-          <Default>Command</Default>
+          <ID>CommandName</ID>
+          <ToolTip>CommandName</ToolTip>
+          <Default>CommandName</Default>
           <Function>
           </Function>
         </Literal>
@@ -35,7 +35,7 @@
 [Authorize]
 public async Task $Method$(int id)
 {
-    await _commandDispatcher.DispatchAsync(new CommandName.Command()
+    await _commandDispatcher.DispatchAsync(new $CommandName$.Command()
     {
         
     });
